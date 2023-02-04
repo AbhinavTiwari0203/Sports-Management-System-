@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Event Creation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="{% static '/css/evecr.css' %}">
+
+</head>
+<body>
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+      <form method="post">
+       {% csrf_token %}
+        <br><br>
+      
+        <h1>Event Creation</h1>
+        
+        <fieldset>
+          <label for="name">Event Name:</label>
+          <input type="text" id="name" name="event_name">
+        </fieldset>
+
+        <fieldset>
+          <label for="sport">Sport:</label>
+          <select id="sport" name="sport">
+            <option value="FootBall">FootBall</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <label for="noteams">No. of Teams:</label>
+          <input type="number" id="noteams" name="noteams" min="4">
+        </fieldset>
+
+        <fieldset>
+          <label for="name">Event Info:</label>
+          <textarea id="event_info" name="event_info"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <label for="name">Event Date:</label>
+          <input type="date" id="date" name="event_date">
+        </fieldset>
+
+        <fieldset>
+          <label for="venue">Event Venue:</label>
+          <input type="text" id="venue" name="venue">
+        </fieldset>
+
+        <fieldset>
+          <label for="event_mode">Event Mode:</label>
+          <select id="event_mode" name="event_mode">
+            <option value="knock-out">Knock-Out</option>
+          </select>
+        </fieldset>
+
+       
+        <button type="submit">Create Event</button>
+      </form>
+      
+    </body>
+</html>
+
+  
+</body>
+</html>
